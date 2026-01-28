@@ -1,0 +1,46 @@
+{
+    "name": "laravel-package-maker/quotes-package",
+    "require": {
+        "php": ">=8.2",
+        "illuminate/support": "^10.0|^11.0|^12.0"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "description": "A demo package",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+        "name": "Romeran Rodriguez",
+        "email": "romeran14@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "LaravelPackageMaker\\QuotesPackage\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "LaravelPackageMaker\\QuotesPackage\\Tests\\": "tests/"
+        }
+    },
+      "scripts": {},
+    "version": "1.0.0",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LaravelPackageMaker\\QuotesPackage\\QuoteServiceProvider"
+            ]
+        }
+    },
+    "require-dev": {
+        "pestphp/pest": "^3.0",
+        "orchestra/testbench": "^10.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}

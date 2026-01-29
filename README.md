@@ -1,0 +1,1 @@
+docker-compose exec app ./package/vendor/bin/pest -c package/phpunit.xml

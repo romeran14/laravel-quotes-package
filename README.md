@@ -21,6 +21,7 @@ This project is a high-performance Quote Management System built as a Laravel Pa
 ### 1. Prerequisites
 * Docker and Docker Compose installed.
 * Port `8080` must be available.
+* Create a `.env` file based on the `.env.example` file.
 
 ### 2. Execution
 From the project root, run:

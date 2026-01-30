@@ -21,7 +21,5 @@ WORKDIR /var/www
 
 COPY --chmod=755 ./docker-entrypoint.sh /var/www/docker-entrypoint.sh
 
-RUN sed -i 's/\r$//' /var/www/docker-entrypoint.sh
-
 ENTRYPOINT ["/var/www/docker-entrypoint.sh"]
 CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8080"]

@@ -30,6 +30,14 @@ if [ ! -f "artisan" ]; then
     php artisan vendor:publish --tag=quotes-config --force
 fi
 
+if [ -f "package/package.json" ]; then
+    echo "Building Vue Application..."
+    cd package
+    npm install
+    npm run build
+    cd ..
+fi
+
 
 echo "Preparing database..."
 # Ensure the database directory exists and create the sqlite file
@@ -43,12 +51,12 @@ php artisan migrate --force
 
 # Seed initial quotes
 echo "Seeding initial quotes..."
-php artisan quotes:batch-import 10
+php artisan quotes:batch-import 20
 
 # UI assetes publishing
 echo "Publishing UI assets..."
 php artisan vendor:publish --tag=quotes-assets --force
 
-# Execute the main command (php-fpm or php artisan serve)
+# Execute the main command
 echo "🎬 Starting application..."
 exec "$@"

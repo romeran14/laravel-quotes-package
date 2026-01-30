@@ -1,7 +1,7 @@
 <template>
   <div class="">
-    <router-link to="/quotes-ui" class="">← Back</router-link>
-    <div v-if="quote" class="mt-4">
+    <router-link to="/quotes-ui" class="back-btn">← Back</router-link>
+    <div v-if="quote" class="detail-card">
       <h2 class="">"{{ quote.quote }}"</h2>
       <p class="">- {{ quote.author }}</p>
     </div>

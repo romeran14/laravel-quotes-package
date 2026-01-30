@@ -51,4 +51,4 @@ We generate a unique signature for every request based on the Client's IP Addres
 
 * Response: The API returns a 429 Too Many Requests status code with a standard Retry-After header, informing the client when they can try again.
 
-![Example View]("./image.png")
+![Example View](image.png)

@@ -36,9 +36,18 @@ echo "Preparing database..."
 mkdir -p database
 touch database/database.sqlite
 
+chmod -R 777 database
+
 echo "Running migrations..."
 php artisan migrate --force
 
+# Seed initial quotes
+echo "Seeding initial quotes..."
+php artisan quotes:batch-import 10
+
+# UI assetes publishing
+echo "Publishing UI assets..."
+php artisan vendor:publish --tag=quotes-assets --force
 
 # Execute the main command (php-fpm or php artisan serve)
 echo "🎬 Starting application..."

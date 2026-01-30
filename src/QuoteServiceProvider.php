@@ -33,10 +33,15 @@ class QuoteServiceProvider extends ServiceProvider
                 Console\BatchImportCommand::class,
             ]);
 
+            $this->publishes([
+                __DIR__.'/../dist' => public_path('vendor/quotes'),
+            ], 'quotes-assets');
         }
 
         //Load routes
         $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
 
+        //Load views
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'quotes');
     }
 }

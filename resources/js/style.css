@@ -1,4 +1,37 @@
 
 body {
+    font-family: 'Inter', system-ui, sans-serif;
     background-color: #f0f0f0;
+    color: #1f2937;
+}
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+.quote-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    margin-bottom: 1rem;
+    border-left: 4px solid #2563eb;
+}
+.btn {
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    border: none;
+    background: #2563eb;
+    color: white;
+}
+.btn:disabled {
+    background: #d1d5db;
+    cursor: not-allowed;
+}
+.nav {
+    background: #1e40af;
+    padding: 1rem;
+    color: white;
+    margin-bottom: 2rem;
 }

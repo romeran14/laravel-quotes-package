@@ -44,7 +44,7 @@ class QuoteService
     /**
      * Rate Limiting
      */
-protected function checkRateLimit(): void
+    protected function checkRateLimit(): void
     {
         // 1. Identify the user by IP
         $clientIp = request()->ip() ?? '127.0.0.1';
@@ -62,7 +62,7 @@ protected function checkRateLimit(): void
     }
 
     public function getQuote(int $id)
-{
+    {
     // 1.Obtain
     $quotes = Cache::get('cached_quotes_list', []);
 

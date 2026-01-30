@@ -12,7 +12,7 @@ services:
     environment:
       - APP_NAME=Laravel
       - APP_ENV=local
-      - APP_KEY=base64:u6tjI/0/k5mH8FzLqFwN8Y8f5G1X6b7Y8f5G1X6b7Y8=
+      - APP_KEY=${APP_KEY}
       - DB_CONNECTION=sqlite
       - DB_DATABASE=/var/www/database/database.sqlite
 

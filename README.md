@@ -35,6 +35,10 @@ From another terminal the project root and the new Laravel app up and running, r
 ```bash
 docker-compose exec app ./package/vendor/bin/pest -c package/phpunit.xml
 ```
+If you have some issues using linux try:
+```bash
+sudo docker-compose exec app chmod +x ./package/vendor/bin/pest && sudo docker-compose exec app ./package/vendor/bin/pest -c package/phpunit.xml
+```
 ##  Rate Limiting strategy
 We generate a unique signature for every request based on the Client's IP Address. The logic utilizes Laravel's RateLimiter facade to manage atomic counters in the cache driver.
 
@@ -51,4 +55,5 @@ We generate a unique signature for every request based on the Client's IP Addres
 
 * Response: The API returns a 429 Too Many Requests status code with a standard Retry-After header, informing the client when they can try again.
 
+## UI View
 ![Example View](image.png)

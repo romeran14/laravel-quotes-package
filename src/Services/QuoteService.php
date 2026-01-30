@@ -47,7 +47,7 @@ class QuoteService
     protected function checkRateLimit(): void
     {
         // 1. Identify the user by IP
-        $clientIp = request()->ip() ?? '127.0.0.1';
+        $clientIp = request()->ip() ?? config('quotes.default_ip', '127.0.0.1');
         
         // Create a unique key
         $key = 'quotes_access:' . $clientIp;
